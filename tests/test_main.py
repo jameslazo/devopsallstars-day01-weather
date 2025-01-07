@@ -1,3 +1,17 @@
+import pytest
+from src import main
+
+def test_api_call_status():
+    pass
+
+def test_api_call_json_keys():
+    pass
+
+def test_s3_bucket():
+    pass
+
+
+
 """ TODO
 API Call Tests
 1. assert API_call status code
