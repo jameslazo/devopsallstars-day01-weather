@@ -1,5 +1,22 @@
+#############################
+# Terraform files to ignore #
+#############################
+.terraform*          
+.terraform/
+.terraform/*
+*.tfstate           
+*.tfstate.backup
+*.tfstate.lock.*
+*.tfvars
+*.lock.*
+
+
+#########################
+# Other files to ignore #
+#########################
 assets/*
 .env
 .venv
 */__pycache__/*
 weather_data/*
+
