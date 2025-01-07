@@ -1,11 +1,11 @@
 import pytest
 from src import main
 
-def test_api_call_status():
-    pass
-
-def test_api_call_json_keys():
-    pass
+def test_api_call():
+    response = main.api_call('Phoenix')
+    assert response.status_code == 200
+    assert 'Phoenix' in response.json()['name']
+    assert int(response.json()['main']['temp'])
 
 def test_s3_bucket():
     pass
