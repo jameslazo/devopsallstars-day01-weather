@@ -25,4 +25,26 @@ def api_call(city):
         print(f"Error fetching weather data: {e}")
         return None
 
-print(api_call('Phoenix').json())
+def main():    
+    cities = ["Phoenix", "New York", "Tokyo"]
+    
+    for city in cities:
+        print(f"\nFetching weather for {city}...")
+        weather_data = api_call(city)
+        if weather_data:
+            temp = weather_data['main']['temp']
+            feels_like = weather_data['main']['feels_like']
+            humidity = weather_data['main']['humidity']
+            description = weather_data['weather'][0]['description']
+            
+            print(f"Temperature: {temp}°F")
+            print(f"Feels like: {feels_like}°F")
+            print(f"Humidity: {humidity}%")
+            print(f"Conditions: {description}")
+            
+        else:
+            print(f"Failed to fetch weather data for {city}")
+
+if __name__ == "__main__":
+    main()
+

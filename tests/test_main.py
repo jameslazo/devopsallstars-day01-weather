@@ -5,7 +5,7 @@ def test_api_call():
     response = main.api_call('Phoenix')
     assert response.status_code == 200
     assert 'Phoenix' in response.json()['name']
-    assert int(response.json()['main']['temp'])
+    assert isinstance(response.json()['main']['temp'], (int, float))
 
 def test_s3_bucket():
     pass
