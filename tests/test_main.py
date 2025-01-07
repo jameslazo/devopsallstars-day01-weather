@@ -7,7 +7,7 @@ def test_api_call():
     assert 'Phoenix' in response.json()['name']
     assert isinstance(response.json()['main']['temp'], (int, float))
 
-def test_s3_bucket():
+def main():
     pass
 
 

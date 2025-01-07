@@ -7,7 +7,7 @@ load_dotenv()
 
 api_key = os.getenv('API_KEY')
 
-# Thank you @ShaeInTheCloud for this beautiful code :D
+# Thank you @ShaeInTheCloud for this beautiful code :D | https://github.com/ShaeInTheCloud/30days-weather-dashboard/blob/main/src/weather_dashboard.py
 def api_call(city):
     """Fetch weather data from OpenWeather API"""
     base_url = "http://api.openweathermap.org/data/2.5/weather"
@@ -30,7 +30,7 @@ def main():
     
     for city in cities:
         print(f"\nFetching weather for {city}...")
-        weather_data = api_call(city)
+        weather_data = api_call(city).json()
         if weather_data:
             temp = weather_data['main']['temp']
             feels_like = weather_data['main']['feels_like']
@@ -41,7 +41,7 @@ def main():
             print(f"Feels like: {feels_like}°F")
             print(f"Humidity: {humidity}%")
             print(f"Conditions: {description}")
-            
+
         else:
             print(f"Failed to fetch weather data for {city}")
 
