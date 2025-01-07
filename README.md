@@ -5,6 +5,19 @@ Day 1 project of the #DevOpsAllStarsChallenge! This project requires provisionin
 - Develop unit tests
 - Create S3 bucket
 - Make API call
-- Transform fetched data to JSON file
+- Dump fetched data to JSON file
 - Write JSON file to S3 bucket
 - Profit
+
+## Develop unit tests
+API Call Tests
+1. Assert API_call status code
+2. Assert response JSON keys
+
+S3 Bucket Tests
+1. Check for S3_bucket
+2. If not S3_bucket Create S3 bucket 
+3. Assert S3_bucket
+4. If not JSON_file put JSON_file object
+5. Assert get JSON_file object
+
