@@ -2,3 +2,4 @@ assets/*
 .env
 .venv
 */__pycache__/*
+weather_data/*
