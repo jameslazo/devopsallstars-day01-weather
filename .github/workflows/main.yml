@@ -17,7 +17,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest
-      - name: Run tests with pytest
+      - name: Run tests with pytest\
+        env:
+          API_KEY: ${{ vars.API_KEY }}
         run: pytest --junitxml=pytest-report.xml
       - name: Configure AWS credentials from repo
         uses: aws-actions/configure-aws-credentials@v1
