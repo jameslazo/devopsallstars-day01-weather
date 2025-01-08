@@ -45,7 +45,9 @@ data "aws_iam_policy_document" "devopsallstars_gha_role_policy" {
       "s3:PutObjectAcl",
       "s3:GetObjectAcl",
       "s3:ListBucket",
-      "s3:GetBucketLocation"
+      "s3:GetBucketLocation",
+      "s3:GetObject",
+      "s3:DeleteObject"
     ]
 
     resources = [
