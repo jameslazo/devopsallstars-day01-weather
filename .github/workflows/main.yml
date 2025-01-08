@@ -9,7 +9,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Set environment variable for API_KEY
-        run: echo "API_KEY=${{ vars.API_KEY }}" >> $GITHUB_ENV
+        run: echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
       - name: Debug API_KEY
         run: echo "API_KEY is $API_KEY"
       - name: Set up Python
