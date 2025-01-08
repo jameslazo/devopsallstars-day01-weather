@@ -54,3 +54,9 @@ data "aws_iam_policy_document" "devopsallstars_gha_role_policy" {
     ]
   }
 }
+
+resource "aws_iam_role_policy" "devopsallstars_gha_policy_attachment" {
+  name   = "devopsallstars_gha_policy_attachment"
+  role   = aws_iam_role.devopsallstars_gha_role.name
+  policy = data.aws_iam_policy_document.devopsallstars_gha_role_policy.json
+}
