@@ -10,6 +10,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Set environment variable for API_KEY
         run: echo "API_KEY=${{ vars.API_KEY }}" >> $GITHUB_ENV
+      - name: Debug API_KEY
+        run: echo "API_KEY is $API_KEY"
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
